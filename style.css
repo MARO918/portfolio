@@ -1,0 +1,98 @@
+/* 背景画像（指定の画像を使用） */
+#background {
+    background-image: url("IMG-20250817-WA0000.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.85);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 全体レイアウト */
+body {
+    font-family: "YuGothic", sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+/* スコア表示 */
+#score-display {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* カード風の質問画面 */
+.screen {
+    width: 80%;
+    max-width: 500px;
+    margin: 120px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* 隠す */
+.hidden {
+    display: none;
+}
+
+/* 質問文 */
+h2 {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* オリジナル青ロボキャラ */
+#robot-cat {
+    width: 120px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
+}
+
+/* ボタン */
+button {
+    padding: 12px 28px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.85;
+}
+
+/* ヒラヒラ落ちるハートアニメーション */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) scale(0.9);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+}
+
+.heart {
+    position: fixed;
+    top: -10px;
+    color: rgba(228, 8, 133, 0.25);
+    font-size: 90px;
+    animation: fall linear infinite;
+    z-index: -1;
+}

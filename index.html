@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>幸福度診断アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="score-display">現在のスコア：0</div>
+
+<div id="background"></div>
+
+<!-- ▼ 各画面を包むコンテナ -->
+<div id="app">
+
+    <!-- 質問画面（1〜10まで JS が順番に表示） -->
+    <div id="question-screen" class="screen">
+        <h2 id="question-title"></h2>
+
+        <form id="answer-form">
+            <label><input type="radio" name="answer" value="1"> ①</label><br>
+            <label><input type="radio" name="answer" value="2"> ②</label><br>
+            <label><input type="radio" name="answer" value="3"> ③</label><br>
+        </form>
+
+        <button id="next-btn">次へすすむ</button>
+    </div>
+
+    <!-- ▼ 結果画面 -->
+    <div id="result-screen" class="screen hidden">
+        <h1>診断結果</h1>
+        <p id="result-message"></p>
+
+        <!-- オリジナル青ロボキャラ（安全） -->
+        <img id="robot-cat" src="robot-cat.png" alt="robot cat">
+
+        <button onclick="location.reload()">もう一度診断する</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
